@@ -16,7 +16,6 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-
     TextView sumTextView, resultTextView;
     TextView scoreTextView;
     CardView goButton;
@@ -33,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout gameLayout;
     ConstraintLayout resultLayout;
     TextView finalResultTextView;
-    int previousRandom = 0;
 
     ArrayList<Integer> answers = new ArrayList<>();
 
@@ -107,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
          * 3 is responsible for performing multiplication.
          */
 
-        int mathOperation = (int) Math.random() * (3) + 1;
+        int mathOperation = random.nextInt(3) + 1;
 
         optionsToChoose(mathOperation, a, b);
 
